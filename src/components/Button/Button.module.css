@@ -1,0 +1,145 @@
+/* KRDS Button Component */
+
+/* Base */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Pretendard', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  -webkit-font-smoothing: antialiased;
+}
+
+.button:disabled,
+.button.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Sizes ── */
+
+.xlarge {
+  height: 64px;
+  padding: 0 24px;
+  font-size: 19px;
+  gap: 4px;
+}
+
+.large {
+  height: 56px;
+  padding: 0 20px;
+  font-size: 19px;
+  gap: 4px;
+}
+
+.medium {
+  height: 48px;
+  padding: 0 16px;
+  font-size: 17px;
+  gap: 4px;
+}
+
+.small {
+  height: 40px;
+  padding: 0 12px;
+  font-size: 15px;
+  gap: 4px;
+}
+
+.xsmall {
+  height: 32px;
+  padding: 0 10px;
+  font-size: 13px;
+  gap: 2px;
+}
+
+/* ── Primary ── */
+
+.primary {
+  background-color: #256EF4;
+  color: #FFFFFF;
+  border: 1px solid transparent;
+}
+
+.primary:hover {
+  background-color: #0B50D0;
+}
+
+.primary:active {
+  background-color: #083891;
+}
+
+.primary:disabled,
+.primary.disabled {
+  background-color: #CDD1D5;
+  color: #6D7882;
+}
+
+/* ── Secondary ── */
+
+.secondary {
+  background-color: #ECF2FE;
+  color: #0B50D0;
+  border: 1px solid #256EF4;
+}
+
+.secondary:hover {
+  background-color: #D8E5FD;
+}
+
+.secondary:active {
+  background-color: #B1CEFB;
+}
+
+.secondary:disabled,
+.secondary.disabled {
+  background-color: #F4F5F6;
+  color: #6D7882;
+  border-color: #CDD1D5;
+}
+
+/* ── Tertiary ── */
+
+.tertiary {
+  background-color: transparent;
+  color: #1E2124;
+  border: 1px solid #58616A;
+}
+
+.tertiary:hover {
+  background-color: #F4F5F6;
+}
+
+.tertiary:active {
+  background-color: #E6E8EA;
+}
+
+.tertiary:disabled,
+.tertiary.disabled {
+  background-color: transparent;
+  color: #6D7882;
+  border-color: #CDD1D5;
+}
+
+/* ── Full Width ── */
+
+.fullWidth {
+  width: 100%;
+}
+
+/* ── Icon ── */
+
+.iconLeft,
+.iconRight {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
