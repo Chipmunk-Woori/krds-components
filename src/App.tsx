@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from './components/Button'
 import { Calendar } from './components/Calendar'
 import { Container } from './components/Container'
+import { Header } from './components/Header'
 
 const sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall'] as const
 const variants = ['primary', 'secondary', 'tertiary'] as const
@@ -13,8 +14,62 @@ export default function App() {
     end: null,
   })
 
+  const utilityItems = [
+    {
+      label: '전체메뉴',
+      dropdownItems: [
+        { label: '유틸리티 레이블', onClick: () => {} },
+        { label: '유틸리티 레이블', onClick: () => {} },
+        { label: '유틸리티 레이블', onClick: () => {} },
+        { label: '유틸리티 레이블', onClick: () => {} },
+      ],
+    },
+    { label: '로그인', onClick: () => {} },
+    { label: '사이트맵', onClick: () => {} },
+  ]
+  const navItems = [
+    { label: '메뉴명', onClick: () => {} },
+    { label: '메뉴명', onClick: () => {} },
+    { label: '메뉴명', onClick: () => {} },
+    { label: '메뉴명', onClick: () => {} },
+    { label: '메뉴명', onClick: () => {} },
+  ]
+  const headerMenuItems = [
+    { label: '메뉴명', onClick: () => {} },
+    { label: '메뉴명', onClick: () => {} },
+    { label: '메뉴명', onClick: () => {} },
+  ]
+
   return (
-    <div style={{ padding: '40px', fontFamily: 'Pretendard, sans-serif', background: '#f8f9fa', minHeight: '100vh' }}>
+    <div style={{ fontFamily: 'Pretendard, sans-serif', background: '#f8f9fa', minHeight: '100vh' }}>
+
+      {/* Header */}
+      <h1 style={{ fontSize: '24px', fontWeight: 700, padding: '40px 40px 16px' }}>KRDS Header</h1>
+
+      <section style={{ marginBottom: '32px' }}>
+        <h2 style={{ fontSize: '17px', fontWeight: 600, padding: '0 40px 16px' }}>variant="union"</h2>
+        <div style={{ background: '#fff', border: '1px solid #d6e0eb' }}>
+          <Header
+            variant="union"
+            utilityItems={utilityItems}
+            navItems={navItems}
+          />
+        </div>
+      </section>
+
+      <section style={{ marginBottom: '60px' }}>
+        <h2 style={{ fontSize: '17px', fontWeight: 600, padding: '0 40px 16px' }}>variant="horizontal"</h2>
+        <div style={{ border: '1px solid #d6e0eb' }}>
+          <Header
+            variant="horizontal"
+            utilityItems={utilityItems}
+            headerMenuItems={headerMenuItems}
+            navItems={navItems}
+          />
+        </div>
+      </section>
+
+      <div style={{ padding: '0 40px' }}>
 
       {/* Button */}
       <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '40px' }}>KRDS Button</h1>
@@ -99,6 +154,7 @@ export default function App() {
             onLinkClick={() => {}}
           />
         </section>
+      </div>
       </div>
     </div>
   )

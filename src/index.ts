@@ -1,3 +1,5 @@
 export { Button } from './components/Button/index'
 export { Calendar } from './components/Calendar/index'
 export { Container } from './components/Container/index'
+export { Header } from './components/Header/index'
+export type { HeaderProps, NavItem, UtilityItem, DropdownItem } from './components/Header/index'
