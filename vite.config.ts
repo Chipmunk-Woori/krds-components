@@ -1,12 +1,19 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [
     react(),
     dts({ include: ['src'], tsconfigPath: './tsconfig.app.json' }),
+    viteStaticCopy({
+      targets: [
+        { src: 'public/fonts/*', dest: 'fonts' },
+        { src: 'src/styles/fonts-dist.css', dest: '', rename: 'fonts.css' },
+      ],
+    }),
   ],
   build: {
     lib: {

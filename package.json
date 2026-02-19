@@ -11,7 +11,8 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./dist/krds-components.css": "./dist/krds-components.css",
+    "./dist/fonts.css": "./dist/fonts.css"
   },
   "files": [
     "dist"
@@ -47,6 +48,7 @@
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.48.0",
     "vite": "^7.3.1",
-    "vite-plugin-dts": "^3.9.1"
+    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-static-copy": "^3.2.0"
   }
 }
