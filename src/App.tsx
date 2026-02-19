@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from './components/Button'
 import { Calendar } from './components/Calendar'
+import { Container } from './components/Container'
 
 const sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall'] as const
 const variants = ['primary', 'secondary', 'tertiary'] as const
@@ -63,6 +64,41 @@ export default function App() {
           />
         </section>
 
+      </div>
+
+      {/* Container */}
+      <h1 style={{ fontSize: '24px', fontWeight: 700, margin: '60px 0 40px' }}>KRDS Container</h1>
+      <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap', alignItems: 'flex-start' }}>
+        <section>
+          <h2 style={{ fontSize: '17px', fontWeight: 600, marginBottom: '16px' }}>Small</h2>
+          <Container
+            size="small"
+            badge="뱃지"
+            title="타이틀 영역"
+            description="간단한 설명이 들어가는 영역입니다. 최대 3줄까지 작성합니다. 간단한 설명이 들어가는 영역입니다."
+            onLinkClick={() => {}}
+          />
+        </section>
+        <section>
+          <h2 style={{ fontSize: '17px', fontWeight: 600, marginBottom: '16px' }}>Medium</h2>
+          <Container
+            size="medium"
+            badge="뱃지"
+            title="타이틀 영역"
+            description="간단한 설명이 들어가는 영역입니다. 최대 3줄까지 작성합니다. 간단한 설명이 들어가는 영역입니다."
+            onLinkClick={() => {}}
+          />
+        </section>
+        <section>
+          <h2 style={{ fontSize: '17px', fontWeight: 600, marginBottom: '16px' }}>Large</h2>
+          <Container
+            size="large"
+            badge="뱃지"
+            title="타이틀 영역"
+            description="간단한 설명이 들어가는 영역입니다. 최대 3줄까지 작성합니다. 간단한 설명이 들어가는 영역입니다."
+            onLinkClick={() => {}}
+          />
+        </section>
       </div>
     </div>
   )

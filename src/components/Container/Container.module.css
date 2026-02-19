@@ -1,0 +1,127 @@
+/* KRDS Container Component */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #ffffff;
+  border: 1px solid #b1b8be;
+  border-radius: 12px;
+  font-family: 'Pretendard', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+/* ── Sizes ── */
+
+.small {
+  width: 320px;
+  padding: 24px;
+}
+
+.medium {
+  width: 400px;
+  padding: 32px;
+}
+
+.large {
+  width: 640px;
+  padding: 40px;
+}
+
+/* ── Image ── */
+
+.image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border: 0.4px solid #b1b8be;
+  display: block;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 220px;
+  background-color: #f4f5f6;
+  border: 0.4px solid #b1b8be;
+  flex-shrink: 0;
+}
+
+/* ── Top Row (badge) ── */
+
+.topRow {
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 8px;
+  background-color: #ecf2fe;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0b50d0;
+  white-space: nowrap;
+}
+
+/* ── Card Title ── */
+
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1e2124;
+}
+
+.titleLarge {
+  font-size: 24px;
+}
+
+.description {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #464c53;
+}
+
+/* ── Link Button ── */
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 2px 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2124;
+}
+
+.link:hover {
+  color: #063a74;
+}
+
+.link:focus,
+.link:focus-visible {
+  outline: none;
+}
