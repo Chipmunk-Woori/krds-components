@@ -45,12 +45,10 @@ export default function App() {
             mode="single"
             value={singleDate}
             onChange={(d) => setSingleDate(d)}
+            showFooter
+            onCancel={() => setSingleDate(null)}
+            onConfirm={() => {}}
           />
-          {singleDate && (
-            <p style={{ marginTop: '12px', fontSize: '15px', color: '#464c53' }}>
-              선택: {singleDate.getFullYear()}년 {singleDate.getMonth() + 1}월 {singleDate.getDate()}일
-            </p>
-          )}
         </section>
 
         <section>
@@ -59,13 +57,10 @@ export default function App() {
             mode="range"
             rangeValue={range}
             onRangeChange={setRange}
+            showFooter
+            onCancel={() => setRange({ start: null, end: null })}
+            onConfirm={() => {}}
           />
-          {range.start && (
-            <p style={{ marginTop: '12px', fontSize: '15px', color: '#464c53' }}>
-              {range.start.getMonth() + 1}/{range.start.getDate()}
-              {range.end ? ` ~ ${range.end.getMonth() + 1}/${range.end.getDate()}` : ' ~ 선택 중'}
-            </p>
-          )}
         </section>
 
       </div>
