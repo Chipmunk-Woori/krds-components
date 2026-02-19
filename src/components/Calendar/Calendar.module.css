@@ -1,0 +1,218 @@
+/* KRDS Calendar Component */
+
+.calendar {
+  width: 384px;
+  background-color: #eef2f7;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: 'Pretendard', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px;
+  border-bottom: 1px solid #cdd1d5;
+  background-color: #eef2f7;
+}
+
+.headerCenter {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+  justify-content: center;
+}
+
+.headerTitle {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1e2124;
+  letter-spacing: 0;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 800px;
+  border: 0.8px solid #cdd1d5;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+  color: #1e2124;
+  transition: background-color 0.15s ease;
+  flex-shrink: 0;
+}
+
+.navButton:hover {
+  background-color: #e6e8ea;
+}
+
+.navButton:active {
+  background-color: #cdd1d5;
+}
+
+.navIcon {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+/* ── Weekday Header ── */
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 16px 16px 8px;
+  gap: 2px;
+}
+
+.weekday {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #464c53;
+}
+
+.weekday.sunday {
+  color: #d63d4a;
+}
+
+.weekday.saturday {
+  color: #256ef4;
+}
+
+/* ── Grid ── */
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 16px 16px;
+}
+
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+/* ── Day Cell ── */
+
+.day {
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2124;
+  border-radius: 1000px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+  position: relative;
+  padding: 0;
+}
+
+.day:hover:not(.disabled):not(.selected):not(.today) {
+  background-color: #d8e5fd;
+}
+
+.day.otherMonth {
+  color: #8a949e;
+  cursor: default;
+}
+
+.day.otherMonth:hover {
+  background-color: transparent;
+}
+
+.day.today {
+  color: #063a74;
+  font-weight: 700;
+  background-color: #ffffff;
+  border: 2px solid #063a74;
+}
+
+.day.today:hover {
+  background-color: #eef2f7;
+}
+
+.day.selected {
+  background-color: #063a74;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.day.selected:hover {
+  background-color: #083891;
+}
+
+.day.inRange {
+  background-color: #d8e5fd;
+  color: #1e2124;
+  border-radius: 0;
+}
+
+.day.rangeStart {
+  background-color: #063a74;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 1000px 0 0 1000px;
+}
+
+.day.rangeEnd {
+  background-color: #063a74;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0 1000px 1000px 0;
+}
+
+.day.rangeStart.rangeEnd {
+  border-radius: 1000px;
+}
+
+.day.sunday {
+  color: #d63d4a;
+}
+
+.day.sunday.selected,
+.day.sunday.rangeStart,
+.day.sunday.rangeEnd {
+  color: #ffffff;
+}
+
+.day.saturday {
+  color: #256ef4;
+}
+
+.day.saturday.selected,
+.day.saturday.rangeStart,
+.day.saturday.rangeEnd {
+  color: #ffffff;
+}
+
+.day.disabled {
+  color: #8a949e;
+  cursor: not-allowed;
+}
+
+.day.disabled:hover {
+  background-color: transparent;
+}

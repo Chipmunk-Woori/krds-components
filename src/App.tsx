@@ -1,15 +1,22 @@
+import { useState } from 'react'
 import { Button } from './components/Button'
+import { Calendar } from './components/Calendar'
 
 const sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall'] as const
 const variants = ['primary', 'secondary', 'tertiary'] as const
 
 export default function App() {
-  return (
-    <div style={{ padding: '40px', fontFamily: 'Pretendard GOV, Pretendard, sans-serif' }}>
-      <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '40px' }}>
-        KRDS Button
-      </h1>
+  const [singleDate, setSingleDate] = useState<Date | null>(null)
+  const [range, setRange] = useState<{ start: Date | null; end: Date | null }>({
+    start: null,
+    end: null,
+  })
 
+  return (
+    <div style={{ padding: '40px', fontFamily: 'Pretendard, sans-serif', background: '#f8f9fa', minHeight: '100vh' }}>
+
+      {/* Button */}
+      <h1 style={{ fontSize: '24px', fontWeight: 700, marginBottom: '40px' }}>KRDS Button</h1>
       {variants.map((variant) => (
         <section key={variant} style={{ marginBottom: '40px' }}>
           <h2 style={{ fontSize: '17px', fontWeight: 600, marginBottom: '16px', textTransform: 'capitalize' }}>
@@ -17,20 +24,51 @@ export default function App() {
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap', marginBottom: '12px' }}>
             {sizes.map((size) => (
-              <Button key={size} variant={variant} size={size}>
-                버튼
-              </Button>
+              <Button key={size} variant={variant} size={size}>버튼</Button>
             ))}
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
             {sizes.map((size) => (
-              <Button key={size} variant={variant} size={size} disabled>
-                버튼
-              </Button>
+              <Button key={size} variant={variant} size={size} disabled>버튼</Button>
             ))}
           </div>
         </section>
       ))}
+
+      {/* Calendar */}
+      <h1 style={{ fontSize: '24px', fontWeight: 700, margin: '60px 0 40px' }}>KRDS Calendar</h1>
+      <div style={{ display: 'flex', gap: '40px', flexWrap: 'wrap' }}>
+
+        <section>
+          <h2 style={{ fontSize: '17px', fontWeight: 600, marginBottom: '16px' }}>단일 선택</h2>
+          <Calendar
+            mode="single"
+            value={singleDate}
+            onChange={(d) => setSingleDate(d)}
+          />
+          {singleDate && (
+            <p style={{ marginTop: '12px', fontSize: '15px', color: '#464c53' }}>
+              선택: {singleDate.getFullYear()}년 {singleDate.getMonth() + 1}월 {singleDate.getDate()}일
+            </p>
+          )}
+        </section>
+
+        <section>
+          <h2 style={{ fontSize: '17px', fontWeight: 600, marginBottom: '16px' }}>범위 선택</h2>
+          <Calendar
+            mode="range"
+            rangeValue={range}
+            onRangeChange={setRange}
+          />
+          {range.start && (
+            <p style={{ marginTop: '12px', fontSize: '15px', color: '#464c53' }}>
+              {range.start.getMonth() + 1}/{range.start.getDate()}
+              {range.end ? ` ~ ${range.end.getMonth() + 1}/${range.end.getDate()}` : ' ~ 선택 중'}
+            </p>
+          )}
+        </section>
+
+      </div>
     </div>
   )
 }
