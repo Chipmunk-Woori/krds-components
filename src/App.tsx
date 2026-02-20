@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from './components/Button'
 import { Calendar } from './components/Calendar'
 import { Container } from './components/Container'
+import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 
 const sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall'] as const
@@ -156,6 +157,55 @@ export default function App() {
         </section>
       </div>
       </div>
+
+      {/* Footer */}
+      <h1 style={{ fontSize: '24px', fontWeight: 700, padding: '60px 40px 16px' }}>KRDS Footer</h1>
+
+      <section style={{ marginBottom: '32px' }}>
+        <h2 style={{ fontSize: '17px', fontWeight: 600, padding: '0 40px 16px' }}>variant="pc"</h2>
+        <Footer
+          relatedSites={[
+            { label: 'related_site', onClick: () => {} },
+            { label: 'related_site', onClick: () => {} },
+            { label: 'related_site', onClick: () => {} },
+            { label: 'related_site', onClick: () => {} },
+          ]}
+          address="주소를 입력해주세요"
+          phones={[
+            { label: '정보 레이블', values: ['010-0000-0000', '정보를 입력해주세요'] },
+            { label: '정보 레이블', values: ['email2025@korea.com', '정보를 입력해주세요'] },
+            { label: '정보 레이블', values: ['oooooo@korea.com', '정보를 입력해주세요'] },
+          ]}
+          infoItems={[
+            { label: '정보입력', value: '중요한 정보를 입력해주세요' },
+            { label: '정보입력', value: '중요한 정보를 입력해주세요' },
+            { label: '정보입력', value: '중요한 정보를 입력해주세요' },
+          ]}
+          utilityLinks={[
+            { label: '유틸리티 링크', onClick: () => {} },
+            { label: '유틸리티 링크', onClick: () => {} },
+            { label: '유틸리티 링크', onClick: () => {} },
+            { label: '유틸리티 링크', onClick: () => {} },
+            { label: '유틸리티 링크', onClick: () => {} },
+            { label: '유틸리티 링크', onClick: () => {} },
+          ]}
+          socialLinks={[
+            { type: 'instagram', onClick: () => {} },
+            { type: 'youtube', onClick: () => {} },
+            { type: 'twitter', onClick: () => {} },
+            { type: 'facebook', onClick: () => {} },
+            { type: 'naverblog', onClick: () => {} },
+          ]}
+          policyLinks={[
+            { label: '개인정보처리방침', onClick: () => {} },
+            { label: '이용약관', onClick: () => {} },
+            { label: '보안센터', onClick: () => {} },
+            { label: '웹 접근성 품질인증 마크 획득', onClick: () => {} },
+            { label: '정책명', onClick: () => {} },
+          ]}
+          copyright="© 2023 Ministry of the Interior and Safety. All rights reserved."
+        />
+      </section>
     </div>
   )
 }

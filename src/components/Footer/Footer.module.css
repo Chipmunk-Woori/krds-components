@@ -1,0 +1,312 @@
+/* KRDS Footer Component */
+
+.footer {
+  width: 100%;
+  font-family: 'Pretendard', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+/* ── Related Site Bar ── */
+
+.relatedSiteBar {
+  width: 100%;
+  background: #ffffff;
+}
+
+.relatedSiteInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  height: 56px;
+  border-left: 1px solid #cdd1d5;
+}
+
+.relatedSiteItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  height: 100%;
+  padding: 0 24px;
+  background: none;
+  border: none;
+  border-top: 1px solid #cdd1d5;
+  border-right: 1px solid #cdd1d5;
+  border-bottom: 1px solid #cdd1d5;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2124;
+  text-decoration: none;
+  text-align: left;
+}
+
+.relatedSiteItem:hover {
+  background-color: #f4f5f6;
+}
+
+.relatedSiteLabel {
+  flex: 1;
+}
+
+.relatedSiteIcon {
+  flex-shrink: 0;
+}
+
+/* ── Surface (main body) ── */
+
+.surface {
+  width: 100%;
+  background: #f4f5f6;
+  padding: 40px 0 24px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.topArea {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ── Logo ── */
+
+.logoArea {
+  flex-shrink: 0;
+}
+
+.logoPlaceholder {
+  width: 200px;
+  height: 48px;
+  background-color: #e8eaed;
+  border: 1px solid #cdd1d5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #8a949e;
+}
+
+/* ── Grid (3 columns) ── */
+
+.grid {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+/* ── Column 1: Address + Phone ── */
+
+.col1 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.addressText {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2124;
+  margin: 0;
+}
+
+.phoneList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.phoneRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.phoneLabel {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1e2124;
+  white-space: nowrap;
+}
+
+.phoneValues {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2124;
+}
+
+.phoneDivider {
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: #6d7882;
+  flex-shrink: 0;
+}
+
+/* ── Column 2: Info Items ── */
+
+.col2 {
+  width: 250px;
+  flex-shrink: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoLabel {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2124;
+}
+
+.infoValue {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1e2124;
+}
+
+/* ── Column 3: Utility Links + Social ── */
+
+.col3 {
+  width: 272px;
+  flex-shrink: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.utilityLinks {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.utilityLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 32px;
+  padding: 0 2px;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2124;
+  text-decoration: none;
+  text-align: left;
+}
+
+.utilityLink:hover {
+  background-color: #eaecee;
+}
+
+.socialList {
+  display: flex;
+  gap: 8px;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: none;
+  border: 1px solid #cdd1d5;
+  border-radius: 1000px;
+  cursor: pointer;
+  color: #1e2124;
+  text-decoration: none;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease;
+}
+
+.socialIcon:hover {
+  background-color: #e8eaed;
+}
+
+/* ── Copyright Row ── */
+
+.copyrightRow {
+  border-top: 1px solid #cdd1d5;
+  padding-top: 16px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.policyLinks {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.policyLink {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 2px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2124;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.policyLink:hover {
+  text-decoration: underline;
+}
+
+.copyrightText {
+  flex-shrink: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #464c53;
+  white-space: nowrap;
+}
