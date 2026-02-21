@@ -1,0 +1,185 @@
+/* KRDS Pagination Component */
+
+.pagination {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  font-family: 'Pretendard', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Number row ── */
+
+.numberRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Prev / Next buttons ── */
+
+.prevBtn,
+.nextBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 40px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.prevBtn {
+  padding: 0 8px 0 4px;
+}
+
+.nextBtn {
+  padding: 0 4px 0 8px;
+}
+
+.navEnabled {
+  color: #464c53;
+}
+
+.navEnabled:hover {
+  background-color: #f4f5f6;
+}
+
+.navDisabled {
+  color: #8a949e;
+  cursor: not-allowed;
+}
+
+/* ── Number buttons ── */
+
+.numberBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.numberActive {
+  background-color: #063a74;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: default;
+}
+
+.numberInactive {
+  background: none;
+  color: #464c53;
+  font-weight: 400;
+}
+
+.numberInactive:hover {
+  background-color: #f4f5f6;
+}
+
+.numberBtn:focus,
+.numberBtn:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ── Ellipsis ── */
+
+.ellipsisBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #464c53;
+}
+
+/* ── Input row ── */
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.pageInput {
+  width: 56px;
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid #58616a;
+  border-radius: 6px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1e2124;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.pageInput:focus {
+  border-color: #256ef4;
+}
+
+.totalPages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0 8px;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #464c53;
+  box-sizing: border-box;
+}
+
+/* ── Go button ── */
+
+.goBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 12px;
+  background-color: #ecf2fe;
+  border: 1px solid #256ef4;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Pretendard', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0b50d0;
+  box-sizing: border-box;
+}
+
+.goBtn:hover {
+  background-color: #dde9fd;
+}

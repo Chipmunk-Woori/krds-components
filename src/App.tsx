@@ -4,12 +4,14 @@ import { Calendar } from './components/Calendar'
 import { Container } from './components/Container'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { Pagination } from './components/Pagination'
 import { SideNavigation } from './components/SideNavigation'
 
 const sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall'] as const
 const variants = ['primary', 'secondary', 'tertiary'] as const
 
 export default function App() {
+  const [paginationPage, setPaginationPage] = useState(1)
   const [singleDate, setSingleDate] = useState<Date | null>(null)
   const [range, setRange] = useState<{ start: Date | null; end: Date | null }>({
     start: null,
@@ -158,6 +160,16 @@ export default function App() {
         </section>
       </div>
       </div>
+
+      {/* Pagination */}
+      <h1 style={{ fontSize: '24px', fontWeight: 700, padding: '60px 40px 16px' }}>KRDS Pagination</h1>
+      <section style={{ padding: '0 40px 60px' }}>
+        <Pagination
+          currentPage={paginationPage}
+          totalPages={99}
+          onChange={setPaginationPage}
+        />
+      </section>
 
       {/* SideNavigation */}
       <h1 style={{ fontSize: '24px', fontWeight: 700, padding: '60px 40px 16px' }}>KRDS SideNavigation</h1>
