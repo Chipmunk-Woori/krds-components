@@ -4,6 +4,7 @@ import { Calendar } from './components/Calendar'
 import { Container } from './components/Container'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { SideNavigation } from './components/SideNavigation'
 
 const sizes = ['xlarge', 'large', 'medium', 'small', 'xsmall'] as const
 const variants = ['primary', 'secondary', 'tertiary'] as const
@@ -157,6 +158,49 @@ export default function App() {
         </section>
       </div>
       </div>
+
+      {/* SideNavigation */}
+      <h1 style={{ fontSize: '24px', fontWeight: 700, padding: '60px 40px 16px' }}>KRDS SideNavigation</h1>
+      <section style={{ padding: '0 40px 60px' }}>
+        <SideNavigation
+          title="1Depth-title"
+          sections={[
+            {
+              label: '2Depth',
+              items: [
+                { label: 'Last depth', onClick: () => {} },
+                { label: 'Last depth', onClick: () => {} },
+                { label: 'Last depth', onClick: () => {} },
+              ],
+            },
+            {
+              label: '2Depth',
+              items: [
+                { label: 'Last depth', onClick: () => {} },
+                { label: 'Last depth', onClick: () => {} },
+                { label: 'Last depth', onClick: () => {} },
+              ],
+            },
+            {
+              label: '2Depth',
+              items: [
+                { label: 'Last depth', onClick: () => {} },
+                { label: 'Last depth', onClick: () => {} },
+                { label: 'Last depth', onClick: () => {} },
+              ],
+            },
+            {
+              label: '2Depth-open',
+              defaultOpen: true,
+              items: [
+                { label: 'Last depth', onClick: () => {} },
+                { label: 'Last depth', onClick: () => {} },
+                { label: 'Last depth', onClick: () => {} },
+              ],
+            },
+          ]}
+        />
+      </section>
 
       {/* Footer */}
       <h1 style={{ fontSize: '24px', fontWeight: 700, padding: '60px 40px 16px' }}>KRDS Footer</h1>
